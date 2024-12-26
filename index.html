@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinni AI</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="chinni.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Chinni AI Logo" class="header-image"> 
+    </div>
+    <div id="welcome-popup" class="popup-container">
+        <div class="popup">
+          <h2>Welcome to Chinni AI!</h2>
+          <p>Your AI assistant is here to help you. 💡</p>
+          <button id="close-popup" class="close-btn">Get Started</button>
+        </div>
+      </div>
+      
+    <div class="main-container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Chinni.<span class="highlight">AI</span></h1>
+            <p>Get useful information using Chinni AI with simple prompts.</p>
+            <p>Developed by Madhu Juttiga</p>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input type="text" id="promptInput" class="input-field" placeholder="Type your question here...">
+                <button class="send-button">Send</button>
+            </div>
+        </div>
+
+        <!-- Chat Display Area -->
+        <div id="chatContainer" class="chat-container"></div>
+    </div>
+
+    <div class="loading-spinner" id="loadingSpinner" style="display: none;">Loading...</div>
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</body>
+</html>

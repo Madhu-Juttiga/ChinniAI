@@ -1,0 +1,343 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0118;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main container styles */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background: rgba(139, 92, 246, 0.1);
+  background-size: 64px 64px;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #7c3aed; /* Purple highlight */
+}
+
+.header p {
+  font-size: 1.125rem;
+  color: #9ca3af; /* Light gray */
+}
+.header p1 {
+  font-size: 1.125rem;
+  color: #9ca3af; /* Light gray */
+}
+
+.header-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px; /* Adjust width as needed */
+  height: auto;
+}
+
+/* Chat input styles */
+.input-container {
+  width: 100%;
+  max-width: 768px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(139, 92, 246, 0.6));
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  background-color: transparent;
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.125rem;
+}
+
+.input-field::placeholder {
+  color: #6b7280;
+  font-style: italic;
+}
+
+.send-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #7c3aed;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.send-button:hover {
+  background-color: #2522cb;
+}
+
+/* Chat response styles */
+.chat-container {
+  margin-top: 1rem;
+  max-width: 768px;
+  width: 100%;
+}
+
+.chat-box {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(15, 23, 42, 0.9);
+  border: 1px solid #7c3aed;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box .message {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  color: #ffffff;
+}
+
+.chat-box .message.user {
+  font-weight: bold;
+  color: #605adb;
+}
+.chat-box .message.ai {
+  font-family: 'Times New Roman', Times, serif; /* Font style */
+  color: #ffffff; /* Text color */
+  font-size: 1.125rem; /* Font size */
+  line-height: 1.6; /* Adjust spacing between lines */
+}
+.chat-box .copy-btn {
+  margin-top: 1rem;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  background-color: #7c3aed;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.chat-box .copy-btn:hover {
+  background-color: #6d2bb6;
+}
+/* Style for the notification */
+.copy-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 9999;
+}
+
+/* Show the notification */
+.copy-notification.show {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+/* Style for the notification */
+.copy-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  z-index: 9999;
+}
+
+/* Show the notification */
+.copy-notification.show {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.loading-spinner .spinner {
+  border: 4px solid rgb(238, 234, 234);
+  border-top: 4px solid #7c3aed;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-charcter {
+  background-image: linear-gradient(
+    -225deg,
+    #9bf139 0%,
+    #1ea4d4 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-family: 'Rye' , cursive;
+  font-size: 1.5rem; /* Slightly larger for emphasis */
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+/* Styling for AI messages */
+.message.ai {
+  font-size: 1.125rem;
+  color: white;
+  line-height: 1.5;
+}
+
+.message.ai br {
+  display: block;
+  margin-bottom: 10px;  /* Add space between numbered lines */
+}
+/* Resetting margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Popup container styles */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Show popup */
+.popup-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Popup content */
+.popup {
+  background: linear-gradient(135deg, #7c3aed, #6b21a8);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+  animation: scaleIn 0.6s ease-out;
+}
+
+.popup h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.popup p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.close-btn {
+  background-color: #6b21a8;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #581c87;
+}
+
+/* Scale animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
